@@ -1,0 +1,6 @@
+<div class="content">
+    <mat-progress-bar *ngIf="!loading" mode="indeterminate"></mat-progress-bar>
+    <ng-container *ngFor="let grupo of grupos">
+        <app-table [grupos]="grupo"></app-table>
+    </ng-container>
+</div>

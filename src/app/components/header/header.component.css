@@ -1,0 +1,7 @@
+#branding {
+    margin: 10px;
+}
+
+.active-link {
+    background-color: rgba(0, 0, 0, 0.3);
+}

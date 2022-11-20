@@ -1,0 +1,54 @@
+.responsive-table {
+  margin: 0 auto;
+  max-width: 960px;
+  overflow: auto;
+}
+
+td.mat-column-star {
+  width: 20px;
+  padding-right: 8px;
+}
+
+th.mat-column-position,
+td.mat-column-position {
+  padding-left: 8px;
+}
+
+.table-header-theme {
+  background-color: #3f51b5;
+}
+
+.table-header-theme th {
+  color: #fff;
+}
+
+.mat-mdc-table-sticky-border-elem-right {
+  border-left: 1px solid #e0e0e0;
+}
+
+.mat-mdc-table-sticky-border-elem-left {
+  border-right: 1px solid #e0e0e0;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+}
+
+.team_flag {
+  object-fit: cover;
+  object-position: center;
+  height: 20px;
+  width: 30px;
+  margin-right: 5px;
+  border-radius: 3px;
+  border: 2px solid #56042c;
+}
+
+.group {
+  margin: 20px;
+}
+.group-name {
+  padding: 0 16px 0 16px;
+  text-align: center;
+}

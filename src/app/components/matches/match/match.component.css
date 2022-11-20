@@ -1,0 +1,84 @@
+.match {
+  max-width: 960px;
+  margin: 0px auto;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #3f51b5;
+  margin: 10px;
+}
+
+.finished {
+  background-color: #2c397e;
+}
+
+.match-info {
+  text-align: center;
+  margin: 10px;
+  color: #fff;
+}
+
+.team_flag {
+  object-fit: cover;
+  object-position: center;
+  height: 40px;
+  width: 50px;
+  border-radius: 3px;
+}
+
+.score {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.home-team,
+.away-team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  width: 300px;
+}
+
+.team_name {
+  min-width: 100px;
+  text-align: center;
+  margin: 0px 5px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.away-team {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 473px) {
+  .team_name {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .team_flag {
+    height: 30px;
+    width: 40px;
+  }
+
+  .team_name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 40px;
+    font-size: 0.8rem;
+  }
+
+  .home-team,
+  .away-team {
+    width: 50px;
+  }
+}
