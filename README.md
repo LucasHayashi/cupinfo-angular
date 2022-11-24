@@ -5,14 +5,14 @@ CupInfo trás uma série de informações sobre a fase de grupos da Copa do Mund
 
 O objetivo do projeto foi colocar em prática os conhecimentos adquiridos durante a realização de diversos cursos, e também disponibilizar uma aplicação para o acompanhamento da copa do mundo 2022 em uma interface agradável com o Angular Material UI.
 
-As informações são disponibizadas gratuitamente pela [free-api-worldcup2022](https://github.com/raminmr/free-api-worldcup2022), onde o servidor faz a requisição dos dados e retorna para os services da aplicação.
-
-Rodar o projeto modo desenvolvedor
+Executar o projeto modo produção
 
 `ng serve --configuration production -o`
 
-Rodar o projeto em modo produção
+Executar o projeto em modo desenvolvedor
 
 `ng serve -o`
 
-['Clique aqui'](https://futinfo-28066.web.app/) para visualizar o Deploy do projeto.
+[Link da API utilizada - free-api-worldcup2022](https://github.com/raminmr/free-api-worldcup2022),
+
+[Deploy do projeto no Firebase](https://futinfo-28066.web.app/) 
