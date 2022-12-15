@@ -1,4 +1,5 @@
 export interface Match {
+  id: string,
   home_flag: string
   home_team_en: string
   home_score: number

@@ -5,21 +5,20 @@ import { TableService } from '../tables/table.service';
 @Component({
   selector: 'app-list-tables',
   templateUrl: './list-tables.component.html',
-  styleUrls: ['./list-tables.component.css']
+  styleUrls: ['./list-tables.component.css'],
 })
 export class ListTablesComponent {
-
   grupos: Tabela[] = [];
   loading: boolean = false;
 
   constructor(private service: TableService) { }
 
   ngOnInit(): void {
-    this.service.listar().subscribe((tabelas) => {
+    this.service.listar().subscribe(({ data }) => {
       let orderedTableByScore: Tabela[] = [];
 
-      tabelas.forEach(tabela => {
-        tabela.teams.sort((a: any, b: any) => {
+      data.forEach((table) => {
+        table.teams.sort((a: any, b: any) => {
           let pontosA = Number(a.pts);
           let pontosB = Number(b.pts);
 
@@ -32,8 +31,8 @@ export class ListTablesComponent {
             return pontosB - pontosA;
           }
         });
-        orderedTableByScore.push(tabela);
-      })
+        orderedTableByScore.push(table);
+      });
       this.grupos = orderedTableByScore;
       this.loading = true;
     });

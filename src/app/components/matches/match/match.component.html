@@ -1,4 +1,4 @@
-<div class="match">
+<div class="match" id="{{ partidas.id }}">
     <div [ngClass]="partidas.finished == 'TRUE' ? 'finished' : ''" class="card-content mat-elevation-z3">
         <div class="home-team">
             <img src="{{ partidas.home_flag }}" alt="{{ partidas.home_team_en }} Flag" class="team_flag">

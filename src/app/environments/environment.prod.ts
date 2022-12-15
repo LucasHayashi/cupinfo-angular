@@ -1,5 +1,6 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://cupinfo-api.onrender.com',
-    enableDebug: false
+    enableDebug: false,
+    email: "lucashayashi5@outlook.com",
+    password: "teste123",
 };

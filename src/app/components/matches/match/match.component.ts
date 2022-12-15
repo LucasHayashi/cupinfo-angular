@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Match } from '../match';
 
@@ -8,6 +9,7 @@ import { Match } from '../match';
 })
 export class MatchComponent {
   @Input() partidas: Match = {
+    id: '629c9c8a5749c4077500ead4',
     away_score: 0,
     home_score: 0,
     local_date: '11/21/2022 19:00',
@@ -18,4 +20,17 @@ export class MatchComponent {
     finished: 'TRUE',
     time_elapsed: 'finished'
   };
+
+  constructor(
+    private scroller: ViewportScroller
+  ) { }
+
+  scrollToNextMatch(id) {
+    //this.scroller.scrollToAnchor(id);
+    console.log(id);
+  }
+
+  digaOi() {
+    console.log("oi");
+  }
 }

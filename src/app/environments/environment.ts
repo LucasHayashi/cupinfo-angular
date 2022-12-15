@@ -1,5 +1,6 @@
 export const environment = {
     production: false,
-    apiUrl: 'http://localhost:8081',
-    enableDebug: true
+    enableDebug: true,
+    email: "lucashayashi5@outlook.com",
+    password: "teste123",
 };
