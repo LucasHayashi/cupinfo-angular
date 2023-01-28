@@ -3,4 +3,5 @@ export const environment = {
     enableDebug: true,
     email: "lucashayashi5@outlook.com",
     password: "teste123",
+    endpoint: "",
 };

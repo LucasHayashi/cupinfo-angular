@@ -3,4 +3,5 @@ export const environment = {
     enableDebug: false,
     email: "lucashayashi5@outlook.com",
     password: "teste123",
+    endpoint: "http://api.cup2022.ir",
 };

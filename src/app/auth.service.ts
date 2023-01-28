@@ -15,13 +15,16 @@ export class AuthService {
   ) { }
 
   login(): void {
-    let userCredentials = {
+    const endpoint = environment.endpoint;
+
+    const headers = { 'Content-Type': 'application/json' };
+    const body = {
       email: environment.email,
       password: environment.password,
     };
 
     this.http
-      .post('/api/v1/user/login', userCredentials, { headers: { noAuth: 'true' } })
+      .post(`${endpoint}/api/v1/user/login`, body, { responseType:'json', headers })
       .subscribe((res: any) => {
         this.setToken(res.data.token);
 

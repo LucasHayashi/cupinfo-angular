@@ -1,3 +1,5 @@
+// PROXY UTILIZADO APENAS PARA O DESENVOLVIMENTO LOCAL
+
 const PROXY_CONFIG = [
     {
         context: [
