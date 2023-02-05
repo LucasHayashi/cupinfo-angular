@@ -6,3 +6,10 @@ h1 {
 .content {
     min-height: calc(100vh - 70px);
 }
+
+.loader {
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

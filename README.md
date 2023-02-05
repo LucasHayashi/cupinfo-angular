@@ -1,18 +1,14 @@
 # CupInfo 2022
-## Tabelas e jogos da fase de grupos da Copa do Mundo Catar 2022
 
-CupInfo trás uma série de informações sobre a fase de grupos da Copa do Mundo Catar 2022.
+## Tabelas e jogos da Copa do Mundo 2022 - Catar
 
-O objetivo do projeto foi colocar em prática os conhecimentos adquiridos durante a realização de diversos cursos, e também disponibilizar uma aplicação para o acompanhamento da copa do mundo 2022 em uma interface agradável com o Angular Material UI.
+O objetivo do projeto foi disponibilizar um site para o acompanhamento da copa do mundo 2022 em uma interface agradável com os recursos do Angular Material.
 
-Executar o projeto modo produção
+## Tecnologias
 
-`ng serve --configuration production -o`
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
 
-Executar o projeto em modo desenvolvedor
+## API
 
-`ng serve -o`
-
-[Link da API utilizada - free-api-worldcup2022](https://github.com/raminmr/free-api-worldcup2022),
-
-[Deploy do projeto no Firebase](https://futinfo-28066.web.app/) 
+- [API Copa do Mundo 2022](https://github.com/LucasHayashi/api-copa-do-mundo-2022)

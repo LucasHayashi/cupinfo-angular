@@ -25,8 +25,14 @@ export class ListTablesComponent {
           if (pontosA === pontosB) {
             let saldoGolsA = Number(a.gd);
             let saldoGolsB = Number(b.gd);
+            if (saldoGolsA === saldoGolsB) {
+              let golsFavorA = Number(a.gf);
+              let golsFavorB = Number(b.gf);
 
-            return saldoGolsB - saldoGolsA;
+              return golsFavorB - golsFavorA;
+            } else {
+              return saldoGolsB - saldoGolsA;
+            }
           } else {
             return pontosB - pontosA;
           }

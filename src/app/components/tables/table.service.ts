@@ -7,10 +7,9 @@ import { environment } from 'src/app/environments/environment';
 })
 export class TableService {
 
-  private readonly faseDeGruposApi = `${environment.endpoint}/api/v1/standings`;
+  private readonly faseDeGruposApi = `${environment.endpoint}/standings`;
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   listar() {
     return this.http.get<any>(this.faseDeGruposApi);

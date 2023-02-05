@@ -1,7 +1,5 @@
 export const environment = {
     production: false,
     enableDebug: true,
-    email: "lucashayashi5@outlook.com",
-    password: "teste123",
-    endpoint: "",
+    endpoint: "https://api-copa-do-mundo-2022.onrender.com/api",
 };

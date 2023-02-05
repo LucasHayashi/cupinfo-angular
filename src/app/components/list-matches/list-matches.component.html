@@ -1,5 +1,7 @@
 <div class="content">
-    <mat-progress-bar *ngIf="!loading" mode="indeterminate"></mat-progress-bar>
+    <div class="loader" *ngIf="!loading">
+        <mat-spinner mode="indeterminate"></mat-spinner>
+    </div>
     <ng-container *ngFor="let partida of partidas">
         <app-match [partidas]="partida"></app-match>
     </ng-container>

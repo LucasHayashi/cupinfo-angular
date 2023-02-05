@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const MaterialComponents = [
   MatToolbarModule, 
@@ -12,7 +12,7 @@ const MaterialComponents = [
   MatButtonModule,
   MatTableModule,
   MatDividerModule,
-  MatProgressBarModule
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

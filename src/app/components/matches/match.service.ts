@@ -7,7 +7,7 @@ import { environment } from 'src/app/environments/environment';
 })
 export class MatchService {
 
-  private readonly listaDeJogosApi = `${environment.endpoint}/api/v1/match`;
+  private readonly listaDeJogosApi = `${environment.endpoint}/match`;
 
   constructor(private http: HttpClient) {
   }
