@@ -1,6 +1,5 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Match } from '../match';
+import { Location, Match, StageName, Status } from '../match';
 
 @Component({
   selector: 'app-match',
@@ -8,29 +7,31 @@ import { Match } from '../match';
   styleUrls: ['./match.component.css'],
 })
 export class MatchComponent {
-  @Input() partidas: Match = {
-    id: '629c9c8a5749c4077500ead4',
-    away_score: 0,
-    home_score: 0,
-    local_date: '11/21/2022 19:00',
-    home_team_en: 'Senegal',
-    away_team_en: 'Nederlands',
-    home_flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/125px-Flag_of_Senegal.svg.png',
-    away_flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/125px-Flag_of_the_Netherlands.svg.png',
-    finished: 'TRUE',
-    time_elapsed: 'finished'
+  @Input() partida: Match = {
+    id: 1,
+    venue: 'Al Bayt Stadium',
+    location: Location.AlKhor,
+    status: Status.Completed,
+    attendance: '67372',
+    stage_name: StageName.FirstStage,
+    home_team_country: 'QAT',
+    away_team_country: 'ECU',
+    datetime: new Date('2022-11-20T16:00:00Z'),
+    winner: 'Ecuador',
+    winner_code: 'ECU',
+    home_team: {
+      country: 'QAT',
+      name: 'Qatar',
+      goals: 0,
+      penalties: 0,
+    },
+    away_team: {
+      country: 'ECU',
+      name: 'Ecuador',
+      goals: 2,
+      penalties: 0,
+    },
+    last_checked_at: new Date('2023-01-01T10:16:03Z'),
+    last_changed_at: new Date('2023-01-01T10:16:03Z'),
   };
-
-  constructor(
-    private scroller: ViewportScroller
-  ) { }
-
-  scrollToNextMatch(id) {
-    //this.scroller.scrollToAnchor(id);
-    console.log(id);
-  }
-
-  digaOi() {
-    console.log("oi");
-  }
 }

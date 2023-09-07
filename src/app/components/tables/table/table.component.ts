@@ -1,31 +1,78 @@
 import { Component, Input } from '@angular/core';
-import { Tabela } from '../table';
+import { Group } from '../table';
 
 @Component({
-    selector: 'app-table',
-    templateUrl: './table.component.html',
-    styleUrls: ['./table.component.css']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css'],
 })
 export class TableComponent {
-    @Input() grupos: Tabela = {
-        "_id": "629c9c7c5749c4077500eaca",
-        "group": "A",
-        "teams": [
-            {
-                "team_id": "1",
-                "mp": "0",
-                "w": "0",
-                "l": "0",
-                "pts": "0",
-                "gf": "0",
-                "ga": "0",
-                "gd": "0",
-                "d": "0",
-                "name_fa": "قطر",
-                "name_en": "Qatar",
-                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/125px-Flag_of_Qatar.svg.png"
-            }
-        ]
-    }
-    displayedColumns = ['name_en', 'pts', 'w', 'l', 'd', 'gf', 'ga', 'gd'];
+  @Input() grupo: Group = {
+    letter: 'A',
+    teams: [
+      {
+        country: 'QAT',
+        name: 'Qatar',
+        group_letter: 'A',
+        group_points: 0,
+        wins: 0,
+        draws: 0,
+        losses: 3,
+        games_played: 3,
+        goals_for: 1,
+        goals_against: 7,
+        goal_differential: -6,
+      },
+      {
+        country: 'NED',
+        name: 'Netherlands',
+        group_letter: 'A',
+        group_points: 10,
+        wins: 3,
+        draws: 1,
+        losses: 1,
+        games_played: 5,
+        goals_for: 10,
+        goals_against: 4,
+        goal_differential: 6,
+      },
+      {
+        country: 'SEN',
+        name: 'Senegal',
+        group_letter: 'A',
+        group_points: 6,
+        wins: 2,
+        draws: 0,
+        losses: 2,
+        games_played: 4,
+        goals_for: 5,
+        goals_against: 7,
+        goal_differential: -2,
+      },
+      {
+        country: 'ECU',
+        name: 'Ecuador',
+        group_letter: 'A',
+        group_points: 4,
+        wins: 1,
+        draws: 1,
+        losses: 1,
+        games_played: 3,
+        goals_for: 4,
+        goals_against: 3,
+        goal_differential: 1,
+      },
+    ],
+  };
+
+  displayedColumns = [
+    'name',
+    'group_points',
+    'wins',
+    'losses',
+    'draws',
+    'goals_for',
+    'goals_against',
+    'goal_differential',
+  ];
 }

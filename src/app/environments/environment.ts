@@ -1,5 +1,6 @@
 export const environment = {
     production: false,
     enableDebug: true,
-    endpoint: "https://api-copa-do-mundo-2022.onrender.com/api",
+    endpoint: "https://worldcupjson.net/",
+    flagUrl: "https://api.fifa.com/api/v3/picture/flags-sq-1/"
 };

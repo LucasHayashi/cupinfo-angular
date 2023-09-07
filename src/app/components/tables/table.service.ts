@@ -7,7 +7,7 @@ import { environment } from 'src/app/environments/environment';
 })
 export class TableService {
 
-  private readonly faseDeGruposApi = `${environment.endpoint}/standings`;
+  private readonly faseDeGruposApi = `${environment.endpoint}/teams`;
 
   constructor(private http: HttpClient) {}
 

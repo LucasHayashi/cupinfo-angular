@@ -36,14 +36,8 @@ td.mat-column-position {
   align-items: center;
 }
 
-.team_flag {
-  object-fit: cover;
-  object-position: center;
-  height: 20px;
-  width: 30px;
-  margin-right: 5px;
-  border-radius: 3px;
-  border: 2px solid #56042c;
+.team-name {
+  margin-left: 10px;
 }
 
 .group {

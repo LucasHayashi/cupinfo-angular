@@ -1,23 +1,25 @@
-<div class="match" id="{{ partidas.id }}">
-    <div [ngClass]="partidas.finished == 'TRUE' ? 'finished' : ''" class="card-content mat-elevation-z3">
+<mat-card class="customCard" id="{{ partida.id }}">
+    <mat-card-content [ngClass]="partida.status == 'completed' ? 'finished' : ''" class="card-content">
         <div class="home-team">
-            <img src="{{ partidas.home_flag }}" alt="{{ partidas.home_team_en }} Flag" class="team_flag">
-            <span class="team_name">{{ partidas.home_team_en }}</span>
+            <img src="{{ partida.home_team_country | flagUrl }}">
+            <span [ngClass]="partida.winner_code === partida.home_team_country ? 'winner' : ''" class="team_name">{{ partida.home_team.name }}</span>
         </div>
         <div class="match-info">
-            <div class="game-status mat-small">
-                {{ partidas.time_elapsed }}
+            <div class="match-date mat-small">
+                {{ partida.datetime | date : 'dd/MM/yyyy HH:mm' }}
             </div>
             <div class="score">
-                {{ partidas.home_score }} - {{ partidas.away_score }}
+                {{ partida.home_team.goals }} - {{ partida.away_team.goals }}
             </div>
-            <div class="match-date mat-small">
-                {{ partidas.local_date }}
-            </div>
+            <ng-container *ngIf="partida.home_team.penalties > 0">
+                <div class="match-penalties mat-small">
+                    {{ partida.home_team.penalties }} - {{ partida.away_team.penalties }}
+                </div>
+            </ng-container>
         </div>
         <div class="away-team">
-            <img src="{{ partidas.away_flag }}" alt="{{ partidas.away_team_en }} Flag" class="team_flag">
-            <span class="team_name">{{ partidas.away_team_en }}</span>
+            <img src="{{ partida.away_team_country | flagUrl }}">
+            <span [ngClass]="partida.winner_code === partida.away_team_country ? 'winner' : ''" class="team_name">{{ partida.away_team.name }}</span>
         </div>
-    </div>
-</div>
+    </mat-card-content>
+</mat-card>

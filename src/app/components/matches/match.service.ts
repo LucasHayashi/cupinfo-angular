@@ -7,7 +7,7 @@ import { environment } from 'src/app/environments/environment';
 })
 export class MatchService {
 
-  private readonly listaDeJogosApi = `${environment.endpoint}/match`;
+  private readonly listaDeJogosApi = `${environment.endpoint}/matches?by_date=asc`;
 
   constructor(private http: HttpClient) {
   }

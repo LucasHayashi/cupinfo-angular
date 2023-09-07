@@ -11,6 +11,7 @@ import { ListTablesComponent } from './components/list-tables/list-tables.compon
 import { HttpClientModule } from '@angular/common/http';
 import { ListMatchesComponent } from './components/list-matches/list-matches.component';
 import { MatchComponent } from './components/matches/match/match.component';
+import { FlagUrlPipe } from './pipes/flag-url.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatchComponent } from './components/matches/match/match.component';
     TableComponent,
     ListTablesComponent,
     ListMatchesComponent,
-    MatchComponent
+    MatchComponent,
+    FlagUrlPipe
   ],
   imports: [
     BrowserModule,

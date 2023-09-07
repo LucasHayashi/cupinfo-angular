@@ -2,7 +2,11 @@
     <div class="loader" *ngIf="!loading">
         <mat-spinner mode="indeterminate"></mat-spinner>
     </div>
-    <ng-container *ngFor="let partida of partidas">
-        <app-match [partidas]="partida"></app-match>
-    </ng-container>
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" animationDuration="0ms">
+        <mat-tab *ngFor="let stage of stages" [label]="stage.label">
+            <ng-container *ngFor="let partida of stage.partidas">
+                <app-match [partida]="partida"></app-match>
+            </ng-container>
+        </mat-tab>
+    </mat-tab-group>
 </div>

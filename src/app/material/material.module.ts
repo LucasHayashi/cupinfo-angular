@@ -5,14 +5,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const MaterialComponents = [
-  MatToolbarModule, 
+  MatToolbarModule,
   MatIconModule,
   MatButtonModule,
   MatTableModule,
   MatDividerModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatCardModule,
+  MatTabsModule,
 ];
 
 @NgModule({
@@ -20,5 +24,4 @@ const MaterialComponents = [
   imports: [MaterialComponents],
   exports: [MaterialComponents],
 })
-
 export class MaterialModule {}
